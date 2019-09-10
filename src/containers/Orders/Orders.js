@@ -15,7 +15,7 @@ componentDidMount(){
     axios.get('/orders.json')
         .then((response) => {
             const fetchedOrders = []
-            for (let key in response.data){
+            for (var key in response.data){
                 fetchedOrders.push({
                     id: key,
                     ...response.data[key]

@@ -104,7 +104,7 @@ class BurgerBuilder extends Component{
 
     purchaseContinueHandler = () => {
         const queryParams = [];
-        for ( let i in this.state.ingredients){
+        for ( var i in this.state.ingredients){
             queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
         }
         queryParams.push('price=' + this.state.totalPrice);
@@ -121,7 +121,7 @@ class BurgerBuilder extends Component{
             ...this.state.ingredients
         };
 
-        for (let key in disabledInfo){
+        for (var key in disabledInfo){
             disabledInfo[key] = disabledInfo[key] <= 0
         }
 
